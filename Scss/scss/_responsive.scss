@@ -1,0 +1,111 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+@media (max-width: 1024px){
+    .section1, .section2, .footer {
+        padding: 10px;
+     }
+}
+@media (max-width: 860px){
+    .burger-icon {
+        display: block;
+        font-weight: bold;
+        color: $footer-color;
+        font-size: 30px;
+        margin-right: $padding-margin;
+    }
+    nav ul :nth-child(1) {
+        color: $footer-color;
+    }
+    nav ul {
+        display: none;
+    }
+    .section1, .section2, .footer {
+        max-width: 800px;
+    }
+}
+@media (max-width: 768px) {
+    .section1, .section2, .footer {
+        max-width: 700px;
+    }
+    .section1 .content{
+        padding:10px;
+    }
+    .form-wrapper{
+        padding: 0 30px;
+    }
+    .footer {
+        padding: 10px 0;
+    }
+    .first-part-footer {
+        max-width: 300px;
+        width: $width-100;
+    }
+    .icons {
+        width: 100px; 
+    }
+    .first{
+        margin: 10px;
+    }
+}
+@media (max-width: 640px) {
+    .section1, .section2, .footer {
+        max-width: 500px;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .form-wrapper{
+        width: 80vw;
+        padding: 5vh 0;
+    }
+    .form-wrapper input{
+        width: $width-100;
+    }
+    .form-wrapper button{
+        width: $width-100;
+    }
+    .first-part-footer {
+        max-width: 500px;
+        width: $width-100;
+        margin-bottom: $padding-margin;
+    }
+    .icons {
+        width: 300px; 
+    }
+    input[type="email"]{
+        width: 300px;
+    }
+    .email p {
+        text-align: center;
+        margin-bottom: $padding-margin;
+    }
+    }
+@media (max-width: 480px) {
+    .section1 {
+        margin-top: 60px;
+    }
+    .footer {
+        max-width: 380px;
+    }
+}
+@media (max-width: 320px) {
+    .footer, .section1, .section2, .paragraph, .form-wrapper {
+        width: 300px;
+    }
+    .bg-image {
+        height: 380px;
+    }
+    .form-wrapper, .bg-image, .section2 {
+        padding: 10px;
+    }
+    .first-part-footer {
+        width: 270px; 
+    }
+    input[type="email"], .icons{
+        width: 250px;
+    }
+}
