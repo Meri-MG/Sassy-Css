@@ -5,53 +5,52 @@
 * Browsers: last 4 version
 */
 
-@media (max-width: 1024px){
-    .section1, .section2, .footer {
-        padding: 10px;
-     }
-}
-@media (max-width: 860px){
-    .burger-icon {
-        display: block;
-        font-weight: bold;
-        color: $footer-color;
-        font-size: 30px;
-        margin-right: $padding-margin;
+
+@media screen and (max-width: 985px) {
+    header  {
+        nav ul {
+            display: none;
+        }
+        .burger-icon {
+            display: block;
+            font-weight: bold;
+            color: $footer-color;
+            font-size: 30px;
+            // margin-right: $padding-margin;
+        }
     }
-    nav ul :nth-child(1) {
-        color: $footer-color;
+    .section1{
+        flex-direction: column;
+        form{
+            margin-top: 50px;
+            .form-wrapper{
+                width:100%;
+            }
+        }
     }
-    nav ul {
-        display: none;
+
+    .section2{
+        flex-direction: column;
+        padding: 40px 0;
+        margin-top: 60px;
+        width: 100vw;
+        background: #506576;
     }
     .section1, .section2, .footer {
         max-width: 800px;
     }
-}
-@media (max-width: 768px) {
-    .section1, .section2, .footer {
-        max-width: 700px;
-    }
-    .section1 .content{
-        padding:10px;
-    }
-    .form-wrapper{
-        padding: 0 30px;
-    }
-    .footer {
-        padding: 10px 0;
-    }
-    .first-part-footer {
-        max-width: 300px;
-        width: $width-100;
-    }
-    .icons {
-        width: 100px; 
-    }
-    .first{
-        margin: 10px;
+    footer{
+        .footer{
+            margin-top: 0;
+            flex-direction: column;
+            div{
+                margin: 30px 0 0 0;
+            }
+        }
     }
 }
+
+
 @media (max-width: 640px) {
     .section1, .section2, .footer {
         max-width: 500px;
@@ -62,12 +61,17 @@
         width: 80vw;
         padding: 5vh 0;
     }
-    .form-wrapper input{
-        width: $width-100;
+    .form-wrapper{
+        button{
+            width: $width-100;
+        }
+        .form{
+        input, select{
+        max-width: $width-100;
+        }
     }
-    .form-wrapper button{
-        width: $width-100;
     }
+ 
     .first-part-footer {
         max-width: 500px;
         width: $width-100;
@@ -89,7 +93,17 @@
         margin-top: 60px;
     }
     .footer {
-        max-width: 380px;
+        // max-width: 380px;
+    }
+
+    footer .footer{
+        .first-part-footer {
+        flex-direction: column;
+        align-items: center;
+        .lists li a{
+            font-size: 25px;
+        }
+        }
     }
 }
 @media (max-width: 320px) {
@@ -102,9 +116,7 @@
     .form-wrapper, .bg-image, .section2 {
         padding: 10px;
     }
-    .first-part-footer {
-        width: 270px; 
-    }
+
     input[type="email"], .icons{
         width: 250px;
     }

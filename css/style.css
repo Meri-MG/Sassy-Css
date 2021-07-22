@@ -45,7 +45,8 @@ a {
 
 header {
   max-width: 1440px;
-  width: 100%;
+  margin: 0 auto;
+  width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -64,7 +65,6 @@ header {
 }
 
 header a {
-  padding-left: 27px;
   color: #FA6980;
   font-size: 13px;
 }
@@ -208,8 +208,7 @@ header .burger-icon .mobile-nav ul {
 }
 
 .form-wrapper {
-  width: 580px;
-  padding: 110px;
+  width: 40%;
 }
 
 .form-wrapper .form {
@@ -226,6 +225,7 @@ header .burger-icon .mobile-nav ul {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  width: 100%;
 }
 
 .form-wrapper .form input, .form-wrapper .form select {
@@ -259,6 +259,10 @@ header .burger-icon .mobile-nav ul {
   height: 40px;
 }
 
+.section2 {
+  width: 96%;
+}
+
 .section2 h2 {
   max-width: 360px;
   width: 100%;
@@ -269,9 +273,9 @@ header .burger-icon .mobile-nav ul {
 }
 
 .section2 .paragraph {
-  width: 360px;
+  max-width: 360px;
   color: #A6ADB4;
-  padding-top: 41px;
+  padding: 41px 10px 0 10px;
 }
 
 .section2 .mins {
@@ -291,9 +295,8 @@ footer .footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -387,53 +390,50 @@ footer .footer .icons i {
 * Autoprefixer: v9.7.6
 * Browsers: last 4 version
 */
-@media (max-width: 1024px) {
-  .section1, .section2, .footer {
-    padding: 10px;
+@media screen and (max-width: 985px) {
+  header nav ul {
+    display: none;
   }
-}
-
-@media (max-width: 860px) {
-  .burger-icon {
+  header .burger-icon {
     display: block;
     font-weight: bold;
     color: #A6ADB4;
     font-size: 30px;
-    margin-right: 20px;
   }
-  nav ul :nth-child(1) {
-    color: #A6ADB4;
+  .section1 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
-  nav ul {
-    display: none;
+  .section1 form {
+    margin-top: 50px;
+  }
+  .section1 form .form-wrapper {
+    width: 100%;
+  }
+  .section2 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 40px 0;
+    margin-top: 60px;
+    width: 100vw;
+    background: #506576;
   }
   .section1, .section2, .footer {
     max-width: 800px;
   }
-}
-
-@media (max-width: 768px) {
-  .section1, .section2, .footer {
-    max-width: 700px;
+  footer .footer {
+    margin-top: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
-  .section1 .content {
-    padding: 10px;
-  }
-  .form-wrapper {
-    padding: 0 30px;
-  }
-  .footer {
-    padding: 10px 0;
-  }
-  .first-part-footer {
-    max-width: 300px;
-    width: 100%;
-  }
-  .icons {
-    width: 100px;
-  }
-  .first {
-    margin: 10px;
+  footer .footer div {
+    margin: 30px 0 0 0;
   }
 }
 
@@ -451,11 +451,11 @@ footer .footer .icons i {
     width: 80vw;
     padding: 5vh 0;
   }
-  .form-wrapper input {
-    width: 100%;
-  }
   .form-wrapper button {
     width: 100%;
+  }
+  .form-wrapper .form input, .form-wrapper .form select {
+    max-width: 100%;
   }
   .first-part-footer {
     max-width: 500px;
@@ -478,8 +478,17 @@ footer .footer .icons i {
   .section1 {
     margin-top: 60px;
   }
-  .footer {
-    max-width: 380px;
+  footer .footer .first-part-footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer .footer .first-part-footer .lists li a {
+    font-size: 25px;
   }
 }
 
@@ -492,9 +501,6 @@ footer .footer .icons i {
   }
   .form-wrapper, .bg-image, .section2 {
     padding: 10px;
-  }
-  .first-part-footer {
-    width: 270px;
   }
   input[type="email"], .icons {
     width: 250px;
